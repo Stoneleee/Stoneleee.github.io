@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分类页面实例</title>
+    <script src="js/jquery/2.0.0/jquery.min.js"></script>
+    <link href="css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <link href="css/classifyPage.css" rel="stylesheet">
+    <script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="classifyDetail">
+    <div class="classifyHeader_middle">
+        <div><img class="headPicture" src="../site/72.jpg"></div>
+        <table class="tableOne">
+            <tr>
+                <td class="tdBackground">
+                    <a href="">综合<span class="glyphicon glyphicon-arrow-down"></span></a>
+                </td>
+                <td>
+                    <a href="">人气<span class="glyphicon glyphicon-arrow-down"></span></a>
+                </td>
+                <td>
+                    <a href="">新品<span class="glyphicon glyphicon-arrow-down"></span></a>
+                </td>
+                <td>
+                    <a href="">销量<span class="glyphicon glyphicon-arrow-down"></span></a>
+                </td>
+                <td>
+                    <a href="">价格<span class="glyphicon glyphicon-resize-vertical"></span></a>
+                </td>
+            </tr>
+        </table>
+        <table class="tableTwo">
+            <tr>
+                <td><input class="sortBarPrice beginPrice" type="text" placeholder="请输入" class=""></td>
+                <td>-</td>
+                <td><input class="sortBarPrice endPrice" type="text" placeholder="请输入" class=""></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        $("input.sortBarPrice").keyup(function(){
+            var num=$(this).val();
+            if(num.length==0){
+                $("div.productUnit").show();
+                return;
+            }
+            num=parseInt(num);
+            if(isNaN(num))
+                num=1;
+            if(num<=0)
+                num=1;
+            $(this).val(num);
+
+            var begin=$("input.beginPrice").val();
+            var end=$("input.endPrice").val();
+            if(!isNaN(begin) && !isNaN(end)){
+                console.log(begin);
+                console.log(end);
+                $("div.productUnit").hide();
+                $("div.productUnit").each(function(){
+                    var price=$(this).attr("price");
+                    price=new Number(price);
+                    if(price<=end&&price>=begin)
+                        $(this).show();
+                });
+            }
+        });
+    </script>
+
+    <div class="categoryProducts">
+        <div price="799.20" class="productUnit">
+            <div class="productUnitFrame">
+                <a href=""><img class="productInfoImage" src="../productImage/7058.jpg"></a>
+                <span class="productPrice">¥799.20</span>
+                <a class="productLink" href="">
+                    MAXFEEL休闲男士手包真皮手拿包大容量信封包手抓包夹包软韩版潮
+                </a>
+                <a class="tmallLink" href="">天猫专卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">16笔</span></span>
+                    <span class="productReview">评价<span class="reviewNumber">14</span></span>
+                    <span class="wangwang"><a href="" class="wangwanglink"><img src="../site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+        <div price="511.20" class="productUnit">
+            <div class="productUnitFrame">
+                <a href=""><img class="productInfoImage" src="../productImage/7047.jpg"></a>
+                <span class="productPrice">¥511.20</span>
+                <a class="productLink" href="">宾度男士手包真皮大容量手拿包牛皮个性潮男包手抓包软包信封包</a>
+                <a class="tmallLink" href="">天猫专卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">49笔</span></span>
+                    <span class="productReview">评价<span class="reviewNumber">18</span></span>
+                    <span class="wangwang"><a href="" class="wangwanglink"><img src="../site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+        <div price="448.20" class="productUnit">
+            <div class="productUnitFrame">
+                <a href=""><img class="productInfoImage" src="../productImage/7036.jpg"></a>
+                <span class="productPrice">¥448.20</span>
+                <a class="productLink" href=""> 唯美诺新款男士手包男包真皮大容量小羊皮手拿包信封包软皮夹包潮</a>
+                <a class="tmallLink" href="">天猫专卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">34笔</span></span>
+                    <span class="productReview">评价<span class="reviewNumber">16</span></span>
+                    <span class="wangwang"><a href="" class="wangwanglink"><img src="../site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+        <div price="411.60" class="productUnit">
+            <div class="productUnitFrame">
+                <a href=""><img class="productInfoImage" src="../productImage/7025.jpg"></a>
+                <span class="productPrice">¥411.60</span>
+                <a class="productLink" href=""> 英伦邦纹男士手包牛皮大容量真皮手拿包手抓包双拉链商务正品软皮</a>
+                <a class="tmallLink" href="">天猫专卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">25笔</span></span>
+                    <span class="productReview">评价<span class="reviewNumber">19</span></span>
+                    <span class="wangwang"><a href="" class="wangwanglink"><img src="../site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+        <div price="157.25" class="productUnit">
+            <div class="productUnitFrame">
+                <a href=""><img class="productInfoImage" src="../productImage/7014.jpg"></a>
+                <span class="productPrice">¥157.25</span>
+                <a class="productLink" href="">劳迪莱斯男士手包休闲手拿包牛皮大容量钱包男包软面小包包手抓包</a>
+                <a class="tmallLink" href="">天猫专卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">17笔</span></span>
+                    <span class="productReview">评价<span class="reviewNumber">16</span></span>
+                    <span class="wangwang"><a href="" class="wangwanglink"><img src="../site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+        <div price="268.20" class="productUnit">
+            <div class="productUnitFrame">
+                <a href=""><img class="productInfoImage" src="../productImage/7003.jpg"></a>
+                <span class="productPrice">¥268.20</span>
+                <a class="productLink" href=""> 帕朗尼男士手拿包真皮手包商务休闲头层牛皮软牛皮大容量休闲钱包</a>
+                <a class="tmallLink" href="">天猫专卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">5笔</span></span>
+                    <span class="productReview">评价<span class="reviewNumber">19</span></span>
+                    <span class="wangwang"><a href="" class="wangwanglink"><img src="../site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+        <div price="233.40" class="productUnit">
+            <div class="productUnitFrame">
+                <a href=""><img class="productInfoImage" src="../productImage/6992.jpg"></a>
+                <span class="productPrice">¥233.40</span>
+                <a class="productLink" href="">编织手包手拿包男信封大容量手抓包真皮韩版潮商务休闲牛皮男包</a>
+                <a class="tmallLink" href="">天猫专卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">10笔</span></span>
+                    <span class="productReview">评价<span class="reviewNumber">17</span></span>
+                    <span class="wangwang"><a href="" class="wangwanglink"><img src="../site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+        <div price="952.00" class="productUnit">
+            <div class="productUnitFrame">
+                <a href=""><img class="productInfoImage" src="../productImage/6981.jpg"></a>
+                <span class="productPrice">¥952.00</span>
+                <a class="productLink" href="">犟牛男士手包真皮手拿包头层牛皮商务大容量手抓包软皮夹包信封包</a>
+                <a class="tmallLink" href="">天猫专卖</a>
+                <div class="productInfo">
+                    <span class="monthDeal">月成交<span class="productDealNumber">20笔</span></span>
+                    <span class="productReview">评价<span class="reviewNumber">16</span></span>
+                    <span class="wangwang"><a href="" class="wangwanglink"><img src="../site/wangwang.png"></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height:500px;"></div>   <!--测试鼠标滚动div-->
+</body>
+</html>

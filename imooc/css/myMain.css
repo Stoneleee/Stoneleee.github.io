@@ -1,0 +1,151 @@
+*{margin:0;padding:0;}
+.header{
+	width:1200px;
+	height:70px;
+	margin:10px auto;
+}
+.header img{
+	margin-left:100px;
+	display:block;
+	float:left;
+}
+.header li{
+	list-style-type:none;
+	float:left;
+	width:100px;
+	line-height:70px;
+}
+.header li a{
+	display:block;
+	width:100px;
+	height:70px;
+	text-decoration:none;
+	color:black;
+	text-align:center;
+}
+.header li a:link,.header li a:visited{
+	background-color:white;
+	color:black;
+}
+.header li a:hover,.header li a:active{
+	background-color:#BD3847;
+}
+
+.lunbo{
+	width:1000px;
+	height:314px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.lunbo li{
+	list-style-type:none;
+	
+}
+
+.scrollNews{
+	width:1000px;
+	height:40px;
+	margin:10px auto;
+}
+.scrollNews .scrollNews_left{
+	width:20%;
+	background-color:#BD3847;
+	float:left;
+	line-height:40px;
+	text-align:center;
+}
+.scrollNews .scrollNews_right{
+	width:80%;
+	line-height:40px;
+	text-indent:2em;
+	background-color:#3E3E3E;
+	float:left;
+}
+.course{
+	width:1000px;
+	height:150px;
+	margin:0 auto;
+}
+.course>div{
+	float:left;
+}
+.course .course_mid{
+	margin:0 5px;
+}
+.course p{
+	text-align:center;
+	border:1px solid lightgray;
+	font-size:14px;
+}
+.course div a{
+	text-decoration:none;
+	
+}
+.content{
+	width:1000px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.newsCenter,.mainAct,.call_us{
+	width:330px;
+	float:left;
+	min-height:280px;
+}
+.mainAct{margin:0 5px;}
+.news_detail{
+	height:70px;
+	margin-top:5px;
+	border-bottom:1px solid lightgray;
+	padding-top:10px;
+	
+}
+.news_detail p{
+	font-size:14px;
+}
+.news_detail .bold{
+	margin-bottom:10px;
+	font-weight:bold;
+}
+.news_detail span{
+	display:block;
+	float:left;
+	width:50px;
+	height:60px;
+	background-color:#BD3847;
+	border-radius:5px;
+	font-size:19px;
+	margin-right:10px;
+}
+
+p.small_title{
+	line-height:40px;
+	padding-left:20px;
+	background-color:#BD3847;
+	color:white;
+}
+.mainAct img{
+	width:300px;
+	height:100px;
+	display:block;
+	margin:10px auto;
+}
+
+.footer{
+	width:1000px;
+	margin:0 auto;
+	background-color:#E7E7E7;
+	text-align:center;
+	line-height:30px;
+	margin-top:10px;
+	clear:both;
+}
+
+
+
+
+
+
+
+
+
+

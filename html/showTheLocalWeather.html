@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Show the Local Weather</title>
+<link href="http://libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<script style="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<style>
+body{padding:0;margin:0px;font-size:12px;}
+#background{
+	width:100%;
+	height:100%;
+	position: fixed;
+	z-index: -1;
+}
+.wrap{
+	width:1100px;
+	margin:0 auto;
+}
+p.theTitle{
+	font-size:3em;
+	padding:50px;
+}
+.left{
+	float:left;
+	width:250px;
+	height:70px;
+	font-size:1.8em;
+	line-height:70px;
+	background:lightgray;
+	border:1px solid lightgray;
+	opacity:0.5;
+	margin-right:10px;
+	margin-top:20px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.left .spanTitle{
+	
+}
+span.spanTitle:hover{
+	cursor:pointer;
+	opacity:1;
+	color:red;
+}
+</style>
+<script type="text/javascript">
+  window.onload=function(){
+  
+	var lon,lat,url;
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(function(position){
+			lon=position.coords.longitude;
+			lat=position.coords.latitude
+			url='http://v.juhe.cn/weather/geo?format=2&key=e90166cd2b215d81c0146c3084330e38&lon='+lon+'&lat='+lat;
+			$.ajax({
+			url: url,
+			dataType: "jsonp",
+			type: "get",
+			data:{lon:lon,lat:lat},
+				success:function(data){
+					var sk=data.result.sk,
+						today=data.result.today,
+						futur=data.result.future,
+						fut="日期温度天气风向";
+					alert(today.city);
+					$('#curCity').html(today.city);
+					$("#curTemp").html(sk.temp+" ℃");
+					$("#todayTemp").html(today.temperature);
+					$("#todayWea").html(today.weather);
+					
+				}		
+			});
+		});
+	}
+	
+  }
+</script>
+</head>
+
+<body>
+	<img id="background" src="../Img/trip701.jpg">
+	
+	<div class="wrap">
+		<p class="text-center theTitle">Show the Local weather</p>
+		<div class="left">
+			<span class="spanTitle">当前城市:</span><span id="curCity"></span>
+		</div>
+		<div class="left">
+			<span class="spanTitle">实时温度:</span><span id="curTemp"></span>
+		</div>
+		<div class="left">
+			<span class="spanTitle">今日温度:</span><span id="todayTemp"></span>
+		</div>
+		<div class="left">
+			<span class="spanTitle">今日天气:</span><span id="todayWea"></span>
+		</div>
+	</div>
+	
+</body>
+</html>

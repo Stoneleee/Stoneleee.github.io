@@ -1,0 +1,46 @@
+body{
+    font-family:Arial;
+}
+div.leftMenu,div.rightMenu{
+    float:left;
+}
+div.leftMenu{
+    background-color: #e2e2e3;
+    width:200px;
+    z-index: 1;
+}
+div.eachCategory{
+    padding-left:10px;
+    line-height:30px;
+}
+div.eachCategory span{
+    padding-right:5px;
+}
+div.eachCategory a{
+    color:black;
+}
+div.eachCategory a:hover{
+    color:rgb(135, 206, 250);
+    text-decoration: none;
+}
+div.eachCategory:hover{
+    background-color:white;
+}
+div.eachColumn{
+    line-height:63px;
+    border-bottom: 1px dashed #e7e7e7;
+    width:600px;
+    margin:0px auto;
+}
+div.rightMenu{
+    width:800px;
+    background-color: white;
+}
+div.eachColumn a{
+    margin-right:15px;
+    color:#999;
+}
+div.eachColumn a:hover{
+    color: #c40000;
+    text-decoration: none;
+}

@@ -1,0 +1,121 @@
+div.categoryWithCarousel{
+    width:100%;
+    position:absolute;
+}
+div.navi{
+    background-color: #dd2727;
+}
+div.navi1{
+    background-color: #C60a0a;
+    color:white;
+    display:inline-block;
+    height:36px;
+    line-height:36px;
+    width:200px;
+    margin:0px 0px 0px 167px;
+    font-weight:bold;
+    font-size:16px;
+}
+div.navi1 span{
+    padding:0px 5px;
+}
+div.navi2{
+    display: inline-block;
+    z-index: 1;
+}
+div.navi2 img{
+    height:30px;
+}
+div.navi2 a{
+    margin:0px 10px;
+    color:white;
+    font-size:16px;
+}
+div.navi2 span{
+    margin-left:20px;
+}
+a:hover {
+    text-decoration: none;
+}
+
+
+div.carousel-of-product{
+    height:510px;
+    width:1000px;
+    margin:0px auto;
+}
+img.carouselImage{
+    height:510px !important;
+}
+div.carouselBackgroundDiv{
+    width:100%;
+    height:510px;
+    background-color: #e8e8e8;
+    position:absolute;
+    top:36px;
+    z-index:-1;
+}
+img.catear{      /*导航栏红色猫耳朵*/
+    position:absolute;
+    height:18px;
+    display:none;
+}
+body{
+    font-family:Arial;
+}
+div.leftMenu,div.rightMenu{
+    float:left;
+}
+div.leftMenu{
+    background-color: #e2e2e3;
+    width:200px;
+    z-index: 1;
+    position: absolute;
+    margin:36px 0px 0px 167px;
+    font-size: 14px;
+}
+div.eachCategory{
+    padding-left:10px;
+    line-height:30px;
+}
+div.eachCategory span{
+    padding-right:5px;
+}
+div.eachCategory a{
+    color:black;
+}
+div.eachCategory a:hover{
+    color:rgb(135, 206, 250);
+    text-decoration: none;
+}
+div.eachCategory:hover{
+    background-color:white;
+}
+div.eachColumn{
+    line-height:63px;
+    border-bottom: 1px dashed #e7e7e7;
+    width:80%;
+    margin:0px auto;
+}
+div.eachColumn a{
+    margin-left:5px;
+}
+div.categoryWithCarousel div.rightMenu{
+    width:860px;
+    height:510px;
+    background-color: white;
+    margin:36px 0px 0px 367px;
+    display: none;
+    position:absolute;
+    left:0px;
+    top:0px;
+    font-size:14px;
+}
+div.eachColumn a{
+    margin-right:15px;
+    color:#999;
+}
+div.eachColumn a:hover{
+    color: #c40000;
+    text-decoration: none;
+}

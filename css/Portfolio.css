@@ -1,0 +1,180 @@
+*{
+	margin:0;
+	padding:0;
+	transition: all ease .5s;
+}
+body{
+	background-color:#000;
+	font-family:"Microsoft YaHei";
+	font-size:12px;
+}
+nav{
+	width:100%;
+	height:70px;
+	line-height:70px;
+	background-color:white;
+	position:fixed;
+	top:0;
+	border-bottom:5px solid #000;
+	z-index:1;
+}
+nav .icon{
+	float:left;
+	font-size:3em;
+	font-family: 'Shadows Into Light', cursive;
+	font-weight:bold;
+	margin-left:200px;
+}
+nav .icon a:hover{
+	text-decoration:none;
+}
+
+nav>ul li{
+	list-style-type:none;
+}
+nav>ul li a{
+	width:100px;
+	height:70px;
+	line-height:70px;
+	text-align:center;
+	display:block;
+	font-size:1.7em;
+	font-weight:bold;
+	margin-right:100px;
+	float:right;
+}
+
+
+nav>ul li a:hover,nav>ul li a.current{
+	text-decoration:none;
+	background-color:#000;
+	color:#FFF;
+}
+#wrap{
+	width:1200px;
+	margin:0 auto;
+	background-color:#FFF;
+}
+h3{
+	margin:0 0 0 50px;
+}
+#about{
+	height:380px;
+	background-color:#F4F4F4;
+	overflow:hidden;
+}
+
+#about .mainImg{
+	width:300px;
+	height:200px;
+	float:left;
+	margin:50px 0 0 220px;
+	border-radius:50%;
+}
+
+#about .textInAbout p{
+	width:400px;
+	text-align:left;
+	text-indent:2em;
+}
+#about .textInAbout{
+	margin:50px 100px 0 0;
+	float:right;
+	font-size:1.2em;
+}
+/* 网页内容，放置作品集图 */
+#content{
+	padding-top:5px;
+	height:800px;
+	overflow:hidden;
+}
+#content img{
+	width:400px;
+	height:240px;
+	margin:0 20px;
+}
+#content .imgDiv{
+	width:900px;
+	margin:0 auto;
+}
+#content .imgDiv a{
+	display:block;
+	float:left;
+	padding:20px 0;
+}
+
+/* 网页联系我部分 */
+#contact{
+	width:1200px;
+	height:460px;
+	background:#F4F4F4;
+	overflow:hidden;
+}
+#contact .contact_left{
+	width:200px;
+	float:left;
+	margin:45px 0 0 270px;
+	line-height:30px;
+	font-size:1.5em;
+	
+}
+#contact .contact_right{
+	width:600px;
+	float:right;
+	line-height:20px;
+	margin-top:50px;
+}
+#contact .contact_right p{
+	line-height:25px;
+	width:400px;
+	border-bottom:1px solid #D8D8D8;
+}
+
+#contact .contact_right input,#contact .contact_right textarea{
+	border:none;
+	background:#F4F4F4;
+	width:400px;
+	outline:none;
+}
+/* input 下的placeholder 样式设置 */
+::-webkit-input-placeholder {				/* WebKit browsers */
+	color:#BDBDBD;
+	font-size:20px;
+}          
+::-moz-placeholder {          				/* firefox 19+ */
+	color:#BDBDBD;
+	font-size:20px;
+}          
+:-ms-input-placeholder {      				/* ie */
+	color:#BDBDBD;
+	font-size:20px;
+}          
+input:-moz-placeholder {
+	color:#BDBDBD; 
+	font-size:20px;
+}
+.socialLink{
+	height:100px;
+	background:pink;
+}
+.socialLink a{
+	display:block;
+	float:left;
+	line-height:100px;
+	margin-right:20px;
+}
+.socialLink a:nth-child(1){
+	margin-left:270px;
+}
+.socialLink a img{
+	width:50px;
+	height:50px;
+}
+/* 网页页脚 */
+.footer{
+	height:80px;
+	line-height:80px;
+	font-size:20px;
+	font-weight:bold;
+	color:lightblue;
+}

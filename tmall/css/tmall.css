@@ -1,0 +1,75 @@
+body{
+    font-size:12px;
+    font-family:Arial;
+}
+nav.top{
+    background: #f2f2f2;
+    padding:5px 0px;
+    border-bottom: 1px solid #f2f2f2;
+}
+div.top_middle{
+    width:76%;
+    margin: 0 auto;
+}
+.redColor{
+    color: #C40000 !important;
+}
+nav.top span, nav.top a{
+    color: #999;
+    margin:0px 10px 0px 10px;
+}
+nav.top a:hover{
+    color:#C40000;
+    text-decoration: none;
+}
+
+div.searchDiv{
+    margin:50px auto;
+    width:400px;
+    background-color:#C40000;
+    padding:1px;
+    height:40px;
+    dispaly:block;
+}
+div.searchDiv input{
+    width:275px;
+    height:36px;
+    margin:1px;
+    border:1px solid transparent;
+    outline:none;
+}
+div.searchDiv button{
+    width:110px;
+    background-color: #C40000;
+    border:1px solid transparent;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+div.searchBelow{
+    margin-top:3px;
+    margin-left:-20px;
+}
+div.searchBelow span{
+    color:#999;
+}
+div.searchBelow a{
+    padding:0px 20px 0px 20px;
+    font-size:14px;
+    color:#999;
+}
+div.searchBelow a:hover{
+    color: #c40000;
+    text-decoration:none;
+}
+img.logo{
+    left:-40px;
+    top:-50px;
+    position:absolute;
+
+}
+div.searchPart{
+    width:1024px;
+    margin:0 auto;
+    position: relative;
+}

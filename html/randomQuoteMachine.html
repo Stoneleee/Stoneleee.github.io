@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>QuoteMachine</title>
+<link href="http://libs.baidu.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Pangolin'>
+<script src="http://libs.baidu.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script style="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<style>
+h1{margin-top:50px;}
+a:hover{
+	text-decoration:none;
+}
+
+.quoteBtn{
+	
+}
+
+.content{
+	padding-top:10px;
+	width:500px;
+	height:300px;
+	margin:0 auto;
+}
+.content .quoteText{
+	width:480px;
+	height:220px;
+	line-height:44px;
+	padding:10px 5px;
+	font-size:36px;
+	font-family:"Pangolin","Arial";
+	text-indent:0.8em;
+	background:lightGray;
+	margin:10px auto;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	
+}
+.quoteBtn{
+	width:120px;
+	height:40px;
+	font-weight:bold;
+	font-size:16px;
+	border:none;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.wb-btn,.tw-btn{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.tw-btn img{
+	width:36px;
+	height:30px;
+}
+.wb-btn img{
+	width:94px;
+	height:30px;
+}
+.quoteBtn,.wb-btn,.tw-btn{
+	float:right;
+	margin-right:30px;
+	margin-top:10px;
+}
+
+</style>
+<script>
+	window.onload=function(){
+		var arr=[
+			"Eyes are raining for her,heart is holding umbrella for her,this is love.",
+			"Let life be beautiful like summer flowers and death like autumn leaves.",
+			"Don't try so hard， the best things come when you least expect them to.",
+			"You smiled and talked to me of nothing and I felt that for this I had been waiting long.",
+			"Never frown, even when you are sad, because you never know who is falling in love with your smile.",
+			"Her wishful face haunts my dreams like the rain at night.",
+			"We come nearest to the great when we are great in humility.",
+			"If you shed tears when you miss the sun, you also miss the stars.",
+			"Listen, my heart,to the whispers of the world with which it makes love to you.",
+			"the furthest distance in the world is not between life and death but when i stand in front of you yet you don't know that i love you.",	
+		];
+		$(".quoteBtn").click(function(){
+			var i=Math.floor(Math.random()*10);
+			$(".quoteText").html(arr[i]);
+			//alert(arr[i]);
+		});
+		
+		function openURL(url){
+			window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
+		}
+		
+		$('#sendQuoteByTwitter').on('click', function() {
+			openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + $(".quoteText").html());
+		});
+		
+		$('#sendQuoteByWeibo').on('click',function(){
+			openURL('http://v.t.sina.com.cn/share/share.php?title=' + $(".quoteText").html());
+		});
+		
+		
+	}
+</script>
+</head>
+<body>
+<h1 class="text-center"><a href="#">A Random Quote Machine</a></h1>
+<p class="text-center">These are some of my favorite quotes I had collected from Tagore.</p>
+<div class="text-center content">
+	<div class="text-center quoteText">
+		Never frown, even when you are sad, because you never know who is falling in love with your smile.
+	</div>
+	
+	<button class="tw-btn btn btn-white" id="sendQuoteByTwitter"><img src="../Img/Twitter-icon.png" alt="icon here"></button>
+	<button class="wb-btn btn btn-danger" id="sendQuoteByWeibo"><img src="../Img/weibo-black.png" alt="icon here"></button>
+	<button class="quoteBtn btn btn-primary" type="button">New Quote</button>
+</div>
+</body>
+</html>

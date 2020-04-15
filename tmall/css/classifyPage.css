@@ -1,0 +1,101 @@
+div.classifyDetail{
+    width:76%;
+    margin:0 auto;
+}
+
+table.tableOne{
+    margin-left:10px;
+}
+table.tableOne td{
+    border:1px solid gray;
+    border-collapse:collapse; /* 设置表格边框实线*/
+}
+table.tableOne td a{
+    font-size:13px;
+    color:gray;
+}
+table.tableOne td a:hover{
+    text-decoration: none;
+    color: #c40000;
+}
+table.tableOne,table.tableTwo{
+    display:inline-block;
+}
+table.tableTwo td input{
+    width:80px;
+    height:22px;
+    outline:none;
+    border:1px solid gray;
+}
+td.tdBackground{
+    background-color:#f1edec;
+}
+img.headPicture{
+    margin:30px 0px 30px 0px;
+}
+
+div.productUnitFrame{
+    width:200px;
+    margin-right:10px;
+}
+span.productPrice{
+    display:block;
+    font-size:20px;
+    color: #cc0000;
+}
+a.productLink{
+    display:block;
+    font-size:12px;
+    color:#333333;
+    margin:10px 0px;
+}
+a.tmallLink{
+    font-size:12px;
+    color:#999;
+    text-decoration: underline;
+}
+div.productUnit{
+    display:inline-block;
+    margin-bottom:40px;
+    margin-right:20px;
+    border:1px solid #eee;
+}
+div.productInfo{
+    margin-top:10px;
+}
+div.productInfo{
+    border:1px solid #eee;
+    width:211px;
+}
+div.productInfo span.monthDeal,span.productReview,span.wangwang{
+    display:inline-block;
+    line-height:40px;
+    font-size:12px;
+    padding-right:10px;
+}
+span.wangwang{
+    float:right;
+}
+img.productInfoImage{
+    width:210px;
+}
+
+
+img.bigImg{
+    width:400px;
+    height:400px;
+    padding:20px;
+    border:1px solid #f2f2f2;
+}
+div.bottomImgInfo{
+    width:80%;
+    margin:20px auto;
+}
+img.smallImg{
+    width:60px;
+    height:60px;
+    border:1px solid white;
+}
+img.smallImg:hover{
+    border:2px solid black;
+}
